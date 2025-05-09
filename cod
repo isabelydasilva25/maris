@@ -1,0 +1,143 @@
+### HTML (index.html)
+html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Academia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#cadastros">Cadastros</a>
+                    <ul class="submenu">
+                        <li><a href="#clientes">Clientes</a></li>
+                        <li><a href="#funcionarios">Funcionários</a></li>
+                    </ul>
+                </li>
+                <li><a href="#movimentos">Movimentos</a></li>
+                <li><a href="#relatorios">Relatórios</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <section id="cadastros">
+                <h2>Cadastros</h2>
+                <div id="clientes">
+                    <h3>Clientes</h3>
+                    <!-- Formulário para cadastro de clientes -->
+                    <form>
+                        <label for="clienteNome">Nome:</label>
+                        <input type="text" id="clienteNome" required>
+                        <label for="clienteEmail">Email:</label>
+                        <input type="email" id="clienteEmail" required>
+                        <button type="submit">Cadastrar Cliente</button>
+                    </form>
+                </div>
+
+                <div id="funcionarios">
+                    <h3>Funcionários</h3>
+                    <!-- Formulário para cadastro de funcionários -->
+                    <form>
+                        <label for="funcionarioNome">Nome:</label>
+                        <input type="text" id="funcionarioNome" required>
+                        <label for="funcionarioCargo">Cargo:</label>
+                        <input type="text" id="funcionarioCargo" required>
+                        <button type="submit">Cadastrar Funcionário</button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="movimentos">
+                <h2>Movimentos</h2>
+                <!-- Adicione aqui os detalhes sobre movimentos -->
+                <p>Aqui você pode gerenciar os movimentos da academia.</p>
+            </section>
+
+            <section id="relatorios">
+                <h2>Relatórios</h2>
+                <!-- Adicione aqui os detalhes sobre relatórios -->
+                <p>Aqui você pode visualizar os relatórios da academia.</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script> <!-- Se precisar adicionar algum script -->
+</body>
+</html>
+
+
+### CSS (styles.css)
+```css
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.menu {
+    background-color: #333;
+    color: white;
+    width: 250px;
+}
+
+.menu h2 {
+    text-align: center;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu > ul > li {
+    border-bottom: 1px solid #444;
+}
+
+.menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #575757;
+}
+
+.submenu {
+    display: none; /* Esconde o submenu por padrão */
+    background-color: #444;
+}
+
+.menu li:hover .submenu {
+    display: block; /* Mostra o submenu ao passar o mouse */
+}
+
+.content {
+    padding: 20px;
+    flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+}
+
+form input {
+    margin-bottom: 10px;
